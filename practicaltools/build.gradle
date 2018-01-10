@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+    }
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+}
+publish {
+    userOrg = 'duanlian'//bintray.com用户名
+    groupId = 'com.duanlian'//jcenter上的路径
+    artifactId = 'practicaltools'//项目名称
+    publishVersion = '0.1'//版本号
+    desc = 'Some pratical tools for Android developer'
+    website = 'https://github.com/duanlian/PracticalCode'
+}
