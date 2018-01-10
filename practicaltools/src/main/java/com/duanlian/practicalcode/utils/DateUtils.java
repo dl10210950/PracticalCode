@@ -22,15 +22,13 @@ import java.util.regex.Pattern;
 /**
  * 通用工具类 段炼
  */
-public class CommonUtils {
+public class DateUtils {
     private static final String GSON_FORMAT = "yyyy-MM-dd HH:mm:ss";
     public static SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
     public static SimpleDateFormat formatDay = new SimpleDateFormat("d", Locale.getDefault());
     public static SimpleDateFormat formatMonthDay = new SimpleDateFormat("M-d", Locale.getDefault());
     public static SimpleDateFormat formatDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
 
-    private CommonUtils() {
-    }
 
 
     /**
@@ -54,9 +52,9 @@ public class CommonUtils {
     }
 
     /**
-     * 将时间戳解析成日期
+     * 将毫秒时间戳解析成日期
      *
-     * @param timeInMillis
+     * @param timeInMillis 毫秒
      * @return 年月日
      */
     public static String parseDate(long timeInMillis) {
@@ -83,7 +81,7 @@ public class CommonUtils {
      * 解析日期
      *
      * @param date
-     * @return
+     * @return data类型的日期
      */
     public static Date parseDate(String date) {
         Date mDate = null;
@@ -113,51 +111,7 @@ public class CommonUtils {
         return mDate;
     }
 
-    /**
-     * 对指定字符串进行md5加密
-     *
-     * @param s
-     * @return 加密后的数据
-     */
-    public static String EncryptMD5(String s) {
-        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                'a', 'b', 'c', 'd', 'e', 'f'};
-        try {
-            byte[] btInput = s.getBytes();
-            // 获得MD5摘要算法的 MessageDigest 对象
-            MessageDigest mdInst = MessageDigest.getInstance("MD5");
-            // 使用指定的字节更新摘要
-            mdInst.update(btInput);
-            // 获得密文
-            byte[] md = mdInst.digest();
-            // 把密文转换成十六进制的字符串形式
-            int j = md.length;
-            char str[] = new char[j * 2];
-            int k = 0;
-            for (int i = 0; i < j; i++) {
-                byte byte0 = md[i];
-                str[k++] = hexDigits[byte0 >>> 4 & 0xf];
-                str[k++] = hexDigits[byte0 & 0xf];
-            }
-            return new String(str);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 
-    /**
-     * 判断email格式是否正确
-     *
-     * @param email
-     * @return
-     */
-    public static boolean isEmail(String email) {
-        String str = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$";
-        Pattern p = Pattern.compile(str);
-        Matcher m = p.matcher(email);
-        return m.matches();
-    }
 
 
     /**
@@ -260,16 +214,4 @@ public class CommonUtils {
         return phoneResult;
     }
 
-    /**
-     * 传入图片资源返回imageView格式
-     * @param resId
-     * @param context
-     * @return
-     */
-    public static ImageView getImageView(int resId, Context context) {
-        ImageView image = new ImageView(context);
-        image.setImageResource(resId);
-        image.setScaleType(ImageView.ScaleType.FIT_XY);
-        return image;
-    }
 }

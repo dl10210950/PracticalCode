@@ -30,7 +30,7 @@ public class SdCardUtil {
 
     /**
      * Get phone data path.
-     *获取手机数据路径
+     * 获取手机数据路径
      */
     public static String getDataPath() {
         return Environment.getDataDirectory().getPath();
@@ -59,7 +59,7 @@ public class SdCardUtil {
             String lineStr;
             while ((lineStr = bufferedReader.readLine()) != null) {
                 if (lineStr.contains("sdcard")
-                        && lineStr.contains(".android_secure")) {
+                            && lineStr.contains(".android_secure")) {
                     String[] strArray = lineStr.split(" ");
                     if (strArray.length >= 5) {
                         sdcard = strArray[1].replace("/.android_secure", "");
@@ -190,15 +190,15 @@ public class SdCardUtil {
         @Override
         public String toString() {
             return "SDCardInfo{" +
-                    "isExist=" + isExist +
-                    ", totalBlocks=" + totalBlocks +
-                    ", freeBlocks=" + freeBlocks +
-                    ", availableBlocks=" + availableBlocks +
-                    ", blockByteSize=" + blockByteSize +
-                    ", totalBytes=" + totalBytes +
-                    ", freeBytes=" + freeBytes +
-                    ", availableBytes=" + availableBytes +
-                    '}';
+                        "isExist=" + isExist +
+                        ", totalBlocks=" + totalBlocks +
+                        ", freeBlocks=" + freeBlocks +
+                        ", availableBlocks=" + availableBlocks +
+                        ", blockByteSize=" + blockByteSize +
+                        ", totalBytes=" + totalBytes +
+                        ", freeBytes=" + freeBytes +
+                        ", availableBytes=" + availableBytes +
+                        '}';
         }
     }
 }

@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * 字符串操作工具类 段炼
  *
  */
-public class MyStringUtils {
+public class StringUtils {
 	private final static Pattern EMAILER = Pattern
 			.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
 	private final static ThreadLocal<SimpleDateFormat> DATE_FORMATER = new ThreadLocal<SimpleDateFormat>() {

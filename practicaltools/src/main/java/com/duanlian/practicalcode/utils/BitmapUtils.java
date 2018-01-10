@@ -152,6 +152,11 @@ public class BitmapUtils {
         return mBitmap;
     }
 
+    /**
+     * 保存bitmap到本地文件
+     * @param bitmap
+     * @param file 文件
+     */
     public static boolean saveBitmap(Bitmap bitmap, File file) {
         if (bitmap == null) return false;
         FileOutputStream fos = null;
@@ -174,6 +179,11 @@ public class BitmapUtils {
         return false;
     }
 
+    /**
+     * 保存bitmap到本地
+     * @param bitmap
+     * @param absPath  String 路径
+     */
     public static boolean saveBitmap(Bitmap bitmap, String absPath) {
         return saveBitmap(bitmap, new File(absPath));
     }

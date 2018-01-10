@@ -12,7 +12,7 @@ public class NetUtils {
     /**
      * 判断当前网络是否可用
      *
-     *
+     *需要加入权限android.permission.ACCESS_NETWORK_STATE
      */
     public static boolean isNetworkConnected(Context context) {
         if (context != null) {
@@ -36,7 +36,7 @@ public class NetUtils {
 
     /**
      * 判断当前wifi是否可用
-     *
+     *需要加入权限android.permission.ACCESS_NETWORK_STATE
      *
      */
     public static boolean isWifiConnected(Context context) {
@@ -54,7 +54,7 @@ public class NetUtils {
 
     /**
      * 判断MOBILE网络是否可用
-     *
+     *需要加入权限android.permission.ACCESS_NETWORK_STATE
      *
      */
     public boolean isMobileConnected(Context context) {
@@ -72,7 +72,7 @@ public class NetUtils {
 
     /**
      * 获取当前网络连接的类型信息 1 wifi 2 移动网络 -1 无网络
-     *
+     *需要加入权限android.permission.ACCESS_NETWORK_STATE
      *
      */
     public int getConnectedType(Context context) {
