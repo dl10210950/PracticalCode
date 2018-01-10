@@ -49,7 +49,7 @@ publish {
     userOrg = 'duanlian'//bintray.com用户名
     groupId = 'com.duanlian'//jcenter上的路径
     artifactId = 'practicaltools'//项目名称
-    publishVersion = '0.1'//版本号
+    publishVersion = '0.2'//版本号
     desc = 'Some pratical tools for Android developer'
     website = 'https://github.com/duanlian/PracticalCode'
 }
