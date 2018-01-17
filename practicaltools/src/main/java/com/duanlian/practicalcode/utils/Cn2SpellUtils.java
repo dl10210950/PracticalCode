@@ -5,7 +5,7 @@ package com.duanlian.practicalcode.utils;
  * Description :汉字转化为拼音
  */
 
-public class Cn2Spell {
+public class Cn2SpellUtils {
     private static int[] pyvalue = new int[]{-20319, -20317, -20304, -20295, -20292, -20283, -20265, -20257, -20242, -20230, -20051, -20036, -20032,
                 -20026, -20002, -19990, -19986, -19982, -19976, -19805, -19784, -19775, -19774, -19763, -19756, -19751, -19746, -19741, -19739, -19728,
                 -19725, -19715, -19540, -19531, -19525, -19515, -19500, -19484, -19479, -19467, -19289, -19288, -19281, -19275, -19270, -19263, -19261,
@@ -53,10 +53,10 @@ public class Cn2Spell {
                 "zhai", "zhan", "zhang", "zhao", "zhe", "zhen", "zheng", "zhi", "zhong", "zhou", "zhu", "zhua", "zhuai", "zhuan", "zhuang", "zhui",
                 "zhun", "zhuo", "zi", "zong", "zou", "zu", "zuan", "zui", "zun", "zuo"};
     private StringBuilder buffer;
-    private static Cn2Spell cn2Spell = new Cn2Spell();
+    private static Cn2SpellUtils cn2SpellUtils = new Cn2SpellUtils();
 
-    public static Cn2Spell getInstance() {
-        return cn2Spell;
+    public static Cn2SpellUtils getInstance() {
+        return cn2SpellUtils;
     }
 
     // 汉字转成ASCII码

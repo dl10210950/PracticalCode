@@ -40,16 +40,16 @@ allprojects {
 
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
 }
 publish {
     userOrg = 'duanlian'//bintray.com用户名
     groupId = 'com.duanlian'//jcenter上的路径
     artifactId = 'practicaltools'//项目名称
-    publishVersion = '0.2'//版本号
+    publishVersion = '0.31'//版本号
     desc = 'Some pratical tools for Android developer'
     website = 'https://github.com/duanlian/PracticalCode'
 }

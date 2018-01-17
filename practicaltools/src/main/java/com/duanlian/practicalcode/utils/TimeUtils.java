@@ -12,7 +12,7 @@ import java.util.GregorianCalendar;
  * 时间工具类  段炼
  */
 
-public class TimeUtil {
+public class TimeUtils {
     /**
      * 将毫秒转成时间
      */
