@@ -38,14 +38,14 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
 
     /**
      * 初始化view
-     * @return
      */
     public abstract View initView();
 
     /**
      * 初始化数据
      */
-    public void initData() {}
+    public void initData() {
+    }
 
     @Override
     public void showProgress(boolean flag, String message) {
@@ -107,6 +107,7 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
     public void close() {
 
     }
+
     /**
      * 获取当前Fragment状态
      *
@@ -115,10 +116,9 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
     private boolean getStatus() {
         return (isAdded() && !isRemoving());
     }
+
     /**
      * 获取Activity
-     *
-     * @return
      */
     public BaseActivity getBaseActivity() {
         if (mActivity == null) {
@@ -126,6 +126,7 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
         }
         return mActivity;
     }
+
     @Override
     public Context getContext() {
         return getActivity();

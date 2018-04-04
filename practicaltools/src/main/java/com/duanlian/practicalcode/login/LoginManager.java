@@ -56,6 +56,8 @@ public class LoginManager {
         return isLogin;
     }
 
+
+
     public void setToken(String token) throws Exception {
         if (mContext == null) {
             throw new Exception("请先初始化LoginManager");
@@ -73,7 +75,7 @@ public class LoginManager {
                 throw new Exception("请先初始化LoginManager");
             } else {
                 Intent intent = new Intent();
-                intent.setClass(mContext,com.duanlian.practicalcode.login.LoginActivity.class);
+                intent.setClass(mContext, com.duanlian.practicalcode.login.LoginActivity.class);
                 mContext.startActivity(intent);
 
             }

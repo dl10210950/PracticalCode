@@ -11,10 +11,6 @@ public abstract class BasePresenter {
     /**
      * 校验指定的字符串是否为空,如果为空则弹出指定内容的Toast
      *
-     * @param verifData
-     * @param view
-     * @param showMessage
-     * @return
      */
     public boolean isEmpty(String verifData, IBaseView view, String showMessage) {
         if (TextUtils.isEmpty(verifData)) {

@@ -164,8 +164,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
 
     /**
      * 获取Fragment管理器
-     *
-     * @return
      */
     public FragmentManager getBaseFragmentManager() {
         if (fragmentManager == null) {
@@ -177,7 +175,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 获取Fragment事物管理
      *
-     * @return
      */
     public FragmentTransaction getFragmentTransaction() {
         return getBaseFragmentManager().beginTransaction();
@@ -186,8 +183,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 替换一个Fragment
      *
-     * @param res
-     * @param fragment
      */
     public void replaceFragment(int res, BaseFragment fragment) {
         replaceFragment(res, fragment, false);
@@ -196,9 +191,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 替换一个Fragment并设置是否加入回退栈
      *
-     * @param res
-     * @param fragment
-     * @param isAddToBackStack
      */
     public void replaceFragment(int res, BaseFragment fragment, boolean isAddToBackStack) {
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
@@ -213,8 +205,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 添加一个Fragment
      *
-     * @param res
-     * @param fragment
      */
     public void addFragment(int res, Fragment fragment) {
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
@@ -225,7 +215,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 移除一个Fragment
      *
-     * @param fragment
      */
     public void removeFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
@@ -236,7 +225,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 显示一个Fragment
      *
-     * @param fragment
      */
     public void showFragment(Fragment fragment) {
         if (fragment.isHidden()) {
@@ -249,7 +237,6 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 隐藏一个Fragment
      *
-     * @param fragment
      */
     public void hideFragment(Fragment fragment) {
         if (!fragment.isHidden()) {
