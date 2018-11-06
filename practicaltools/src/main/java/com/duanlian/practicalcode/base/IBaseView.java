@@ -55,7 +55,6 @@ public interface IBaseView {
 
     /**
      * 获取当前上下文对象
-     * @return
      */
     Context getContext();
 

@@ -98,7 +98,6 @@ public class DateUtils {
      * 解析日期
      *
      * @param datetime
-     * @return
      */
     public static Date parseDateTime(String datetime) {
         Date mDate = null;
@@ -172,7 +171,6 @@ public class DateUtils {
      * 获取联系人电话
      *
      * @param cursor
-     * @return
      */
     public String getContactPhone(Context context, Cursor cursor) {
 

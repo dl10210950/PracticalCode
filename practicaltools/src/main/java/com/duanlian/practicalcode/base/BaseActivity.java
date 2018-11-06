@@ -29,7 +29,7 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     private ProgressDialog mProgressDialog;
     FragmentManager fragmentManager;
     private CustomConfirmDialog confirmDialog;
-    private ImmersionBar immersionBar;
+    //private ImmersionBar immersionBar;
 
     /**
      * 初始化布局
@@ -51,16 +51,14 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
         super.onCreate(savedInstanceState);
         //initPresenter();
 
-        //初始化沉浸式状态栏
-        immersionBar = ImmersionBar.with(this);
-        immersionBar
-                    .statusBarColor("#ff00ff")
-
-                    .fitsSystemWindows(true)
-                    .init();
+//        //初始化沉浸式状态栏
+//        immersionBar = ImmersionBar.with(this);
+//        immersionBar.statusBarColor("#FF581C48")
+//                    .fitsSystemWindows(true)
+//                    .init();
         setContentView(setContentView());
-        // 初始化View注入
-        ButterKnife.bind(this);
+//        // 初始化View注入
+//        ButterKnife.bind(this);
         initView();
         initData();
     }

@@ -40,8 +40,7 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
             }
         } else {
             mLayoutView = getCreateView(inflater, container);
-            ButterKnife.bind(this, mLayoutView);
-            initView();     //初始化布局
+            initView(mLayoutView);     //初始化布局
         }
 
         return mLayoutView;
@@ -61,7 +60,7 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
     /**
      * 初始化view
      */
-    public abstract View initView();
+    public abstract void initView(View mLayoutView);
 
     /**
      * 初始化数据
