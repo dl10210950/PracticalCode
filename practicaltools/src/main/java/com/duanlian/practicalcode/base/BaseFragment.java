@@ -9,13 +9,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
+
 /**
  * Fragment的基类
  */
 
 public abstract class BaseFragment extends Fragment implements IBaseView {
     private BaseActivity mActivity;
-    private View mView;
+    private View mLayoutView;
+
+    /**
+     * 初始化布局
+     */
+    public abstract int getLayoutRes();
 
 
     @Override
@@ -26,10 +33,25 @@ public abstract class BaseFragment extends Fragment implements IBaseView {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = initView();
-        return mView;
-    }
+        if (mLayoutView != null) {
+            ViewGroup parent = (ViewGroup) mLayoutView.getParent();
+            if (parent != null) {
+                parent.removeView(mLayoutView);
+            }
+        } else {
+            mLayoutView = getCreateView(inflater, container);
+            ButterKnife.bind(this, mLayoutView);
+            initView();     //初始化布局
+        }
 
+        return mLayoutView;
+    }
+    /**
+     * 获取Fragment布局文件的View
+     */
+    private View getCreateView(LayoutInflater inflater, ViewGroup container) {
+        return inflater.inflate(getLayoutRes(), container, false);
+    }
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

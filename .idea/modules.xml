@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PracticalCode.iml" filepath="$PROJECT_DIR$/.idea/PracticalCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticalCode.iml" filepath="$PROJECT_DIR$/PracticalCode.iml" />
+      <module fileurl="file://D:\PracticalCode\.idea\PracticalCode.iml" filepath="D:\PracticalCode\.idea\PracticalCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicaltools/practicaltools.iml" filepath="$PROJECT_DIR$/practicaltools/practicaltools.iml" />
     </modules>

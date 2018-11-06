@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,7 +15,11 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.duanlian.practicalcode.R;
 import com.duanlian.practicalcode.widget.CustomConfirmDialog;
+import com.gyf.barlibrary.ImmersionBar;
+
+import butterknife.ButterKnife;
 
 
 /**
@@ -24,11 +29,12 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     private ProgressDialog mProgressDialog;
     FragmentManager fragmentManager;
     private CustomConfirmDialog confirmDialog;
+    private ImmersionBar immersionBar;
 
     /**
      * 初始化布局
      */
-    public abstract void initContentView();
+    public abstract int setContentView();
 
     /**
      * 初始化控件
@@ -38,16 +44,29 @@ public abstract class BaseActivity extends FragmentActivity implements IBaseView
     /**
      * 初始化控制中心
      */
-    public abstract void initPresenter();
+   // public abstract void initPresenter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 隐藏标题栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        initContentView();
-        initPresenter();
+        //initPresenter();
+
+        //初始化沉浸式状态栏
+        immersionBar = ImmersionBar.with(this);
+        immersionBar
+                    .statusBarColor("#ff00ff")
+
+                    .fitsSystemWindows(true)
+                    .init();
+        setContentView(setContentView());
+        // 初始化View注入
+        ButterKnife.bind(this);
         initView();
+        initData();
+    }
+
+    private void initData() {
+
     }
 
 
