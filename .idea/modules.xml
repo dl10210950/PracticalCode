@@ -6,6 +6,7 @@
       <module fileurl="file://D:\PracticalCode\.idea\PracticalCode.iml" filepath="D:\PracticalCode\.idea\PracticalCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicaltools/practicaltools.iml" filepath="$PROJECT_DIR$/practicaltools/practicaltools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/refreshlayout/refreshlayout.iml" filepath="$PROJECT_DIR$/refreshlayout/refreshlayout.iml" />
     </modules>
   </component>
 </project>
