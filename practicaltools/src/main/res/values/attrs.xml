@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomLoading">
+        <attr name="stroke_color" format="color" />
+        <attr name="water_color" format="color" />
+        <!--气泡颜色-->
+        <attr name="bubble_color" format="color" />
+        <!--气泡最大半径-->
+        <attr name="bubble_max_radius" format="integer" />
+        <attr name="bubble_min_radius" format="integer" />
+        <!--气泡最大速度-->
+        <attr name="bubble_max_speed" format="float"/>
+        <attr name="bubble_min_speed" format="float"/>
+        <attr name="bubble_max_number" format="integer"/>
+        <!--创建气泡时间间隔-->
+        <attr name="bubble_creation_interval" format="integer"/>
+        <attr name="stroke_width" format="dimension"/>
+        <!--水位与烧瓶高度的百分比-->
+        <attr name="water_height_percent" format="float"/>
+
+    </declare-styleable>
+</resources>
