@@ -1,4 +1,4 @@
-package com.duanlian.bnbar;
+package com.duanlian.practicalcode.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -40,12 +40,12 @@ import java.util.List;
                         R.drawable.ic_tab_news_selected)
                 .build();
  */
-public class BottomBar extends View {
+public class BottomNBar extends View {
 
 
     private Context context;
 
-    public BottomBar(Context context, @Nullable AttributeSet attrs) {
+    public BottomNBar(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
     }
@@ -82,38 +82,38 @@ public class BottomBar extends View {
     private int iconHeight = 20;
     private int titleIconMargin = 5;
 
-    public BottomBar setContainer(int containerId) {
+    public BottomNBar setContainer(int containerId) {
         this.containerId = containerId;
         return this;
     }
 
-    public BottomBar setTitleBeforeAndAfterColor(String beforeResCode, String AfterResCode) {//支持"#333333"这种形式
+    public BottomNBar setTitleBeforeAndAfterColor(String beforeResCode, String AfterResCode) {//支持"#333333"这种形式
         titleColorBefore = Color.parseColor(beforeResCode);
         titleColorAfter = Color.parseColor(AfterResCode);
         return this;
     }
 
-    public BottomBar setTitleSize(int titleSizeInDp) {
+    public BottomNBar setTitleSize(int titleSizeInDp) {
         this.titleSizeInDp = titleSizeInDp;
         return this;
     }
 
-    public BottomBar setIconWidth(int iconWidth) {
+    public BottomNBar setIconWidth(int iconWidth) {
         this.iconWidth = iconWidth;
         return this;
     }
 
-    public BottomBar setTitleIconMargin(int titleIconMargin) {
+    public BottomNBar setTitleIconMargin(int titleIconMargin) {
         this.titleIconMargin = titleIconMargin;
         return this;
     }
 
-    public BottomBar setIconHeight(int iconHeight) {
+    public BottomNBar setIconHeight(int iconHeight) {
         this.iconHeight = iconHeight;
         return this;
     }
 
-    public BottomBar addItem(Class fragmentClass, String title, int iconResBefore, int iconResAfter) {
+    public BottomNBar addItem(Class fragmentClass, String title, int iconResBefore, int iconResAfter) {
         fragmentClassList.add(fragmentClass);
         titleList.add(title);
         iconResBeforeList.add(iconResBefore);
@@ -121,7 +121,7 @@ public class BottomBar extends View {
         return this;
     }
 
-    public BottomBar setFirstChecked(int firstCheckedIndex) {//从0开始
+    public BottomNBar setFirstChecked(int firstCheckedIndex) {//从0开始
         this.firstCheckedIndex = firstCheckedIndex;
         return this;
     }
