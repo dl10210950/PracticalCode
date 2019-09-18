@@ -1,4 +1,4 @@
-package com.duanlian.bnbar;
+package com.duanlian.practicalcode.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,6 +15,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import com.duanlian.practicalcode.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -23,6 +25,7 @@ import java.util.Stack;
 /**
  * Created by duanlian.ex on 2019/1/3.
  * 烧瓶动画 ,调用start()开始动画
+ * 停止stop(),销毁release()
  */
 
 public class CustomLoading extends View {
