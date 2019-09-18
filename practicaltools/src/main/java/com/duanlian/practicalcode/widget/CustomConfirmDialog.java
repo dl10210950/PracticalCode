@@ -12,6 +12,7 @@ import com.duanlian.practicalcode.R;
 
 /**
  * 自定义确认对话框
+ * new CustomConfirmDialog(context,title,listener)
  */
 public class CustomConfirmDialog {
     private Button btnPositive, btnNegative;
